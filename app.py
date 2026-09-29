@@ -1,14 +1,14 @@
 from flask import Flask
 
-application = Flask(__name__)
+app = Flask(__name__)
 
-@application.route("/")
+@app.route("/")
 def home():
-    return "Hello! Welcome to AWS Elastic Beanstalk."
+    return "Hello! Welcome to Google Cloud Run."
 
-@application.route("/about")
+@app.route("/about")
 def about():
-    return "This application is deployed on AWS."
+    return "This application is deployed on Google Cloud Run."
 
 if __name__ == "__main__":
-    application.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=8080)
